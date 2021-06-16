@@ -129,6 +129,15 @@ class WebRtcAudioTrack {
           byteBuffer.position(0);
         }
         int bytesWritten = writeBytes(audioTrack, byteBuffer, sizeInBytes);
+
+        //TODO(ztf-ange)
+        //this modify maybe disturb audio display
+
+        
+
+
+
+
         if (bytesWritten != sizeInBytes) {
           Logging.e(TAG, "AudioTrack.write played invalid number of bytes: " + bytesWritten);
           // If a write() returns a negative value, an error has occurred.
